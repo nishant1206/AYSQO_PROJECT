@@ -28,14 +28,14 @@ export default function TopNavigation() {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', bgcolor: 'primary.dark', height: '100%' }}>
-      <Typography variant="h6" sx={{ my: 2, color: 'secondary.main' }}>
+      <Typography variant="h6" sx={{ my: 2, color: 'black' }}>
         MyLogo
       </Typography>
       <List>
         {navLinks.map((link) => (
           <ListItem key={link.href} disablePadding>
             <ListItemButton href={link.href} sx={{ textAlign: 'center' }}>
-              <ListItemText primary={link.label} sx={{ color: '#fff' }} />
+              <ListItemText primary={link.label} sx={{ color : "black" }} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -50,7 +50,7 @@ export default function TopNavigation() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" sx={{ bgcolor: 'primary.dark' }}>
+      <AppBar position="fixed" sx={{ bgcolor: '#fff' , boxShadow : "-1px -6px 10px 1px black" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -68,7 +68,7 @@ export default function TopNavigation() {
             sx={{
               flexGrow: 1,
               textDecoration: 'none',
-              color: 'inherit',
+              color: 'black',
               fontWeight: 700,
             }}
           >
@@ -79,7 +79,7 @@ export default function TopNavigation() {
               <Button
                 key={link.href}
                 href={link.href}
-                sx={{ color: '#fff', textTransform: 'none', '&:hover': { color: 'secondary.main' } }}
+                sx={{ color: '#000', textTransform: 'none', '&:hover': { color: 'secondary.main' } }}
               >
                 {link.label}
               </Button>
@@ -87,7 +87,7 @@ export default function TopNavigation() {
             <Button
               href="/booking"
               variant="contained"
-              sx={{ ml: 2, bgcolor: 'secondary.main', textTransform: 'none', '&:hover': { bgcolor: 'secondary.dark' } }}
+              sx={{ ml: 2, bgcolor: 'blue', textTransform: 'none', '&:hover': { bgcolor: 'secondary.dark' } }}
             >
               Book Now
             </Button>
